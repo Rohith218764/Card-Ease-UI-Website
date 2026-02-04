@@ -1,0 +1,38 @@
+body {
+  background-image: url("https://img.freepik.com/free-vector/gradient-background-green-tones_23-2148367877.jpg?w=1480&t=st=1694016855~exp=1694017455~hmac=da913c727824037af2c45958e2d8dd865a73abf79eccf71965921bdaa52ad513");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#success {
+  background-color: rgb(0, 90, 82);
+  border: 3px solid rgb(255, 255, 255);
+  font-size: 50px;
+  width: 13em;
+  text-align: center;
+  margin-left: 29%;
+  padding: 10px;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+}
+
+.sign {
+  margin-left: 85%;
+  padding: 10px;
+}
+
+.home {
+  margin-left: 3%;
+  padding: 10px;
+  margin-top: 3%;
+}
+
+p {
+  font-size: 30px;
+  text-align: center;
+}
+
+#tid:hover {
+  font-size: 300%;
+}

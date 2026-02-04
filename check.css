@@ -1,0 +1,80 @@
+body {
+  text-align: center;
+  font-family: bodoni MT, sans-serif;
+  background-image: url("https://img.freepik.com/premium-photo/secure-online-payment-internet-banking-via-credit-card-mobile_73903-454.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.home {
+  float: left;
+}
+
+.signout {
+  text-align: right;
+}
+
+h1 {
+  font-size: 50px;
+  border: 4px;
+  background-color: rgb(209, 210, 228);
+  padding: 10px;
+  width: 13em;
+  margin-left: 26.5%;
+  border-radius: 100px;
+}
+
+.info {
+  outline: rgb(209, 210, 228) solid 10px;
+  align-items: center;
+  text-align: center;
+  margin-left: 9.8cm;
+  width: 45%;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.cn {
+  background-color: rgb(160, 134, 209);
+  width: 13em;
+  margin-left: 2.6cm;
+  border: 1px solid rgb(21, 163, 120);
+  padding: 20px;
+  border-radius: 10px;
+}
+.follow {
+  font-family: badoni MT black;
+  font-size: 30px;
+  font-weight: 1000;
+}
+.amount {
+  background-color: rgb(160, 134, 209);
+  width: 6.9cm;
+  margin-left: 4.7cm;
+  font-size: 25px;
+  border: 1px solid rgb(10, 10, 10);
+  font-family: Franklin Gothic Demi Cond;
+  border-radius: 10px;
+}
+
+button {
+  margin: 2px 1px;
+}
+
+button {
+  font-size: 15px;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: rgb(80, 87, 17);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: rgb(47, 47, 48);
+  transform: scale(1.1);
+}

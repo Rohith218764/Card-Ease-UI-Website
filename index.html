@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Card Ease</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body>
+    <style>
+      body {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/007/503/116/non_2x/3d-minimal-bank-deposit-and-withdrawal-transactions-money-service-banking-financial-concept-bank-building-with-hand-holding-coin-for-saving-investment-3d-bank-render-on-blue-background-vector.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    </style>
+    <div class="head">
+      <h1>Card Ease</h1>
+      <h3>Empowering Digital Transactions and ATM Card Management</h3>
+    </div>
+    <div>
+      <a href="#about" id="about-button">About</a>
+    </div>
+    <div class="content">
+      <div class="main">
+        <form>
+          <div class="box">
+            <div class="text">
+              <h2 style="font-size: 300%">Login</h2>
+              <label for="username"></label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username"
+              />
+              <br /><br />
+              <label for="pwd"></label>
+              <div class="password-container">
+                <input
+                  type="password"
+                  id="pwd"
+                  name="pwd"
+                  placeholder="Password"
+                />
+                <i
+                  class="bi bi-eye-slash"
+                  id="showPasswordButton"
+                  onclick="togglePasswordVisibility(this)"
+                ></i>
+              </div>
+              <br /><br />
+
+              <input
+                type="button"
+                class="btn"
+                onclick="validateInput()"
+                value="Submit"
+              />
+
+              <div class="register-link">
+                <p>Dont have an account? <a href="newuser.html">Register</a></p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="remain">
+        <h1 id="about">
+          <big>Card Ease:</big> Empowering Digital Transactions and ATM Card
+          Management
+        </h1>
+
+        <div class="bo">
+          <h3 style="font-size: 125%">About the webpage</h3>
+          <p>
+            Welcome to "Card Ease," your all-in-one online financial platform
+            designed to simplify and empower your financial life. Our webpage
+            offers a comprehensive suite of financial services, carefully
+            tailored to meet your diverse financial needs.
+          </p>
+          <p>
+            From the secure login page to the seamless new user registration
+            process, "Card Ease" ensures a reliable and user-friendly start to
+            your financial journey. Once inside, our homepage serves as your
+            dedicated financial control center, offering a holistic and
+            real-time view of your accounts.
+          </p>
+          <p>
+            Keep a watchful eye on your financial health by effortlessly
+            checking your balances and delve into your transaction history with
+            ease.
+          </p>
+          <p>
+            For your convenience, we provide a unified bill payment system that
+            covers everything from Fastag management, electricity bill payments,
+            to swift and secure mobile recharges. Dive into the details of your
+            account transactions, gaining valuable insights into your financial
+            activities.
+          </p>
+          <p>
+            Enhance the security of your account with the simple MPIN submission
+            process and receive immediate confirmation of your successful
+            transactions. "Card Ease" is here to make your financial management
+            efficient, secure, and hassle-free, ensuring you enjoy a smarter way
+            of handling your finances. Welcome to a world of financial
+            empowerment with "Card Ease."
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function togglePasswordVisibility(icon) {
+        const passwordInput = document.getElementById("pwd");
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          icon.classList.remove("bi-eye-slash");
+          icon.classList.add("bi-eye");
+        } else {
+          passwordInput.type = "password";
+          icon.classList.remove("bi-eye");
+          icon.classList.add("bi-eye-slash");
+        }
+      }
+
+      function validateInput() {
+        const UsernameInput = document.getElementById("username");
+        const nameValue = UsernameInput.value;
+        const PasswordInput = document.getElementById("pwd");
+        const inputValue = PasswordInput.value;
+
+        if (nameValue.trim() === "" && inputValue.trim() === "") {
+          alert(" Please Enter your credentials");
+        } else if (nameValue.trim() === "") {
+          alert(" Please Enter your Username");
+        } else if (inputValue.trim() === "") {
+          alert("Please Enter your Password");
+        } else {
+          var usernames = ["prabhas", "rohitsharma", "ronaldo", "tarak"];
+          var passwords = [
+            "Prab@13222",
+            "Roh#12333",
+            "Ron$123125",
+            "Ntr$$2185",
+          ];
+
+          function validateUsername(username) {
+            for (var i = 0; i < usernames.length; i++) {
+              if (username === usernames[i]) {
+                return true;
+              }
+            }
+            return false;
+          }
+
+          function validatePassword(password) {
+            const isLengthValid = password.length >= 8;
+            const hasSpecialChar = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\]/.test(
+              password
+            );
+            const hasUpperCase = /[A-Z]/.test(password);
+            const hasLowerCase = /[a-z]/.test(password);
+            const hasNumber = /\d/.test(password);
+
+            if (!isLengthValid) {
+              alert("Password should be at least 8 characters long.");
+            }
+
+            if (!hasSpecialChar) {
+              alert("Password should contain at least one special character.");
+            }
+
+            if (!hasUpperCase) {
+              alert("Password should contain at least one uppercase letter.");
+            }
+
+            if (!hasLowerCase) {
+              alert("Password should contain at least one lowercase letter.");
+            }
+
+            if (!hasNumber) {
+              alert("Password should contain at least one number.");
+            }
+
+            if (
+              isLengthValid &&
+              hasSpecialChar &&
+              hasUpperCase &&
+              hasNumber &&
+              hasLowerCase
+            ) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+
+          function showError(message) {
+            alert(message);
+          }
+
+          function highlightInvalidFields() {
+            if (!validateUsername(document.getElementById("username").value)) {
+              document.getElementById("username").style.border =
+                "1px solid red";
+            }
+            if (!validatePassword(document.getElementById("pwd").value)) {
+              document.getElementById("pwd").style.border = "1px solid red";
+            }
+          }
+
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("pwd").value;
+
+          if (!validateUsername(username) || !validatePassword(password)) {
+            alert("Invalid username or password");
+            disableSignInButton();
+            highlightInvalidFields();
+            return;
+          } else {
+            window.location.href = "homepage.html";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+body {
+  background-image: url("https://www.freevector.com/uploads/vector/preview/24301/DD-Blue-Abstract-Background-43029-Preview.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.heads {
+  align: center;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 20px;
+  width: 300px;
+  border-color: black;
+  background-image: url("https://www.amcharts.com/docs/v5/wp-content/uploads/sites/7/2021/08/linear_gradient.png");
+  padding: 10px;
+  margin-left: 40%;
+  font-family: papyrus, copperplate, fantasy;
+  letter-spacing: 3px;
+}
+.h1 {
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+.dik {
+  background-image: url("https://images.wondershare.com/mockitt/tips/gradient-02.jpg");
+  border: 5px solid White;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 30px;
+}
+.dis {
+  font-family: "Trebuchet MS", sans-serif;
+  border: 3px solid black;
+  border-radius: 20px;
+  border-color: black;
+  margin: 10px;
+}
+.fast {
+  letter-spacing: 3px;
+  padding: 50px;
+  border: 3px solid #7357d9;
+  background-color: lightblue;
+  border-radius: 20px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  width: 300px;
+  transition-property: width;
+  transition-duration: 2s;
+}
+
+.fast:hover {
+  width: 400px;
+}
+
+.elec {
+  background-color: rgb(181, 181, 255);
+  text-align: center;
+  letter-spacing: 3px;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+  width: 300px;
+  transition-property: "width";
+  transition-duration: 2s;
+}
+
+.elec:hover {
+  width: 400px;
+}
+.mob {
+  background-color: rgb(229, 199, 199);
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 5px;
+  border-radius: 20px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  border: 3px solid #4caf50;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 19px;
+  width: 300px;
+  transition-property: "width";
+  transition-duration: 2s;
+}
+
+.mob:hover {
+  width: 400px;
+}
+
+.back {
+  align-content: "margin-left";
+  border-radius: 20px;
+  margin-left: 3%;
+  padding: 10px;
+  margin-top: 3%;
+  width: 100px;
+  transition-property: "width";
+  transition-duration: 2s;
+}
+
+.back:hover {
+  width: 120px;
+}

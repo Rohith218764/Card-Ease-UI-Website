@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>fastag</title>
+    <style>
+      body {
+        background-size: cover;
+        text-align: center;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      input[type="number"] {
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body style="background-size: cover; text-align: center;">
+    <img
+      src="https://i.ndtvimg.com/i/2014-09/fastag-main_625x300_41410926817.jpg"
+      alt="fastagtext"
+    /><br />
+    <form style="font-size: 20px;">
+      <label for="fnumber"><b>fnumber</b></label>
+      <input
+        type="text"
+        id="fnumber"
+        name="fnumber"
+        maxlength="10"
+        size="20"
+        value=""
+      /><br /><br />
+      <label for="amount"><b>amount</b></label>
+      <input type="number" id="amount" name="amount" value="" /><br /><br />
+      <input
+        type="button"
+        value="submit"
+        padding-radius="10px"
+        onclick="validateInput()"
+      />
+    </form>
+    <br /><br />
+    <input
+      type="button"
+      value="Home"
+      onclick="window.location.href='homepage.html'"
+    />
+
+    <script>
+      function redirectToLoginPage() {
+        window.location.href = "index.html";
+        alert("You have been idle for too long. Please log in again.");
+      }
+
+      const inactivityTimeout = 120000;
+      let timeoutId;
+      function resetInactivityTimer() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(function () {
+          redirectToLoginPage();
+        }, inactivityTimeout);
+      }
+      function resetInactivityTimer() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(redirectToLoginPage, inactivityTimeout);
+      }
+      document.addEventListener("mousemove", resetInactivityTimer);
+      document.addEventListener("keydown", resetInactivityTimer);
+      resetInactivityTimer();
+      function validateInput() {
+        const fnumberInput = document.getElementById("fnumber");
+        const inputValue = fnumberInput.value;
+
+        if (inputValue.trim() === "") {
+          alert("fnumber cannot be empty. Please enter your fnumber.");
+        } else if (isNaN(inputValue) || inputValue.length < 10) {
+          alert("Please enter a valid 10-digit number for fnumber.");
+        } else {
+          window.location.href = "password.html";
+        }
+      }
+    </script>
+  </body>
+</html>

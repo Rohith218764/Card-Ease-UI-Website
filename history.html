@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      TRANSACTION HISTORY
+    </title>
+    <style>
+      .box {
+        border: 2px;
+        border-radius: 10px;
+        color: red;
+        margin: auto;
+        margin-bottom: 35px;
+        width: 400px;
+        padding: 9px;
+        height: 22px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        font-size: 23px;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(235, 211, 103);
+      }
+      .te {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        text-align: center;
+      }
+      .bg {
+        background-color: rgb(219, 214, 214);
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        padding: 1px;
+      }
+      .fl {
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        /* flex-direction: column; */
+        justify-content: center;
+      }
+      .sn {
+        padding: 7px;
+        border: 1px solid black;
+        border-radius: 9px;
+        background-color: yellowgreen;
+        color: white;
+        font-size: 18px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      .sn:hover {
+        background-color: rgb(54, 78, 4);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg">
+    <input
+      class="sn"
+      type="button"
+      value="home"
+      style="margin-left: 3%; margin-top: 3%;"
+      onclick="window.location.href='homepage.html'"
+    />
+    <input
+      class="sn"
+      type="submit"
+      value="sign out"
+      style="margin-left: 83%;"
+      onclick="alert('signning out from the account');window.location.href='index.html'"
+    />
+    <h1 style="font-size: 47px; text-decoration-line: underline;" class="te">
+      HISTORY DETAILS :
+    </h1>
+    <div class="box">
+      <h3>Card no:***********6969</h3>
+    </div>
+
+    <div class="fl">
+      <table class="te" style="width: 100%;">
+        <tr>
+          <th>Type of transaction</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Amount</th>
+        </tr>
+        <tr>
+          <td style="color: blue;">Mobile rechahtmlrge</td>
+          <td style="color: blue;">12/09/2023</td>
+          <td style="color: blue;">12:30 pm</td>
+          <td style="color: red;">-450/-</td>
+        </tr>
+        <tr>
+          <td style="color: blue;">Money transfer</td>
+          <td style="color: blue;">13/09/2023</td>
+          <td style="color: blue;">5:30 pm</td>
+          <td style="color: red;">-1000/-</td>
+        </tr>
+        <tr>
+          <td style="color: blue;">Deposit</td>
+          <td style="color: blue;">15/09/2023</td>
+          <td style="color: blue;">9:45 am</td>
+          <td style="color: green;">+10000/-</td>
+        </tr>
+      </table>
+    </div>
+    <br /><br />
+    <button onclick="window.print()" style="margin-left: 48%;" class="sn">
+      Print</button
+    ><br /><br />
+    <script>
+      function redirectToLoginPage() {
+        window.location.href = "index.html";
+        alert("You have been idle for too long. Please log in again.");
+      }
+
+      const inactivityTimeout = 120000;
+      let timeoutId;
+      function resetInactivityTimer() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(function () {
+          redirectToLoginPage();
+        }, inactivityTimeout);
+      }
+      function resetInactivityTimer() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(redirectToLoginPage, inactivityTimeout);
+      }
+      document.addEventListener("mousemove", resetInactivityTimer);
+      document.addEventListener("keydown", resetInactivityTimer);
+      resetInactivityTimer();
+    </script>
+  </body>
+</html>

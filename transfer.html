@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amount transfer</title>
+    <link rel="stylesheet" href="amount.css" />
+  </head>
+
+  <body>
+    <div class="bac">
+      <input
+        type="button"
+        onclick="window.location.href='homepage.html'"
+        value="back"
+      />
+    </div>
+    <div class="tot">
+      <p><br /></p>
+      <h1>Amount Transfer</h1>
+      <form>
+        <label for="Account no."></label>
+        <div class="amount">
+          <input
+            type="number"
+            id="Account no"
+            name="Account no"
+            placeholder="Account no"
+          /><br /><br />
+          <label for="amount"></label><br />
+
+          <input
+            type="number"
+            id="amt"
+            name="amt"
+            placeholder="Enter Amount"
+          /><br /><br />
+          <input
+            type="button"
+            value="Submit"
+            class="submit"
+            onclick="validateInput()"
+          /><br /><br />
+        </div>
+      </form>
+    </div>
+    <script>
+      function validateInput() {
+        const accountnumInput = document.getElementById("Account no");
+        const numValue = accountnumInput.value;
+        const amountInput = document.getElementById("amt");
+        const amontValue = amountInput.value;
+
+        if (numValue.trim() === "" && amontValue.trim() === "") {
+          alert(" Please Enter your credentials");
+        } else if (numValue.trim() === "") {
+          alert(" Please Enter your accountnum");
+        } else if (isNaN(numValue) || numValue.length < 12) {
+          alert("Enter a valid 12-digit number for account number");
+        } else if (amontValue.trim() === "") {
+          alert("Please Enter your password");
+        } else {
+          window.location.href = "password.html";
+        }
+      }
+      function redirectToLoginPage() {
+        window.location.href = "index.html";
+        alert("You have been idle for too long. Please log in again.");
+      }
+
+      const inactivityTimeout = 120000;
+      let timeoutId;
+      function resetInactivityTimer() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(function () {
+          redirectToLoginPage();
+        }, inactivityTimeout);
+      }
+      function resetInactivityTimer() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(redirectToLoginPage, inactivityTimeout);
+      }
+    </script>
+  </body>
+</html>

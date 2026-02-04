@@ -1,0 +1,137 @@
+.content {
+  margin: 5em 0 auto;
+  width: 100%;
+}
+.main {
+  height: 40em;
+  border-bottom: 2px solid grey;
+}
+
+.box {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 30px;
+  margin-left: 32.5%;
+  border-color: rgb(150, 150, 150);
+}
+
+.text {
+  text-align: center;
+  font-size: medium;
+  color: black;
+}
+.remain {
+  height: 45em;
+  padding: 10px;
+  width: 100%;
+}
+.highlighted-label {
+  background-color: lightyellow;
+}
+.bo {
+  font-size: 137%;
+  height: 73%;
+  margin-left: 5%;
+  padding-top: 1em;
+  padding: 10px;
+  width: 87%;
+  border: 5px solid black;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 65%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  padding: 20px 45px 20px 20px;
+}
+
+input[type="button"],
+.custom-button {
+  font-size: 15px;
+  padding: 5px 7px;
+  background-color: #ffff99;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.1s;
+}
+#showPasswordButton {
+  background-color: white;
+  cursor: pointer;
+}
+input[type="button"]:hover,
+.custom-button:hover {
+  background-color: #cacecc;
+  color: #333;
+  transform: scale(1.1);
+}
+.head {
+  text-align: center;
+  font-size: 150%;
+}
+
+#about-button {
+  text-align: left;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #ffff99;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+  float: left;
+  margin-left: 3%;
+}
+
+#about-button:hover {
+  background-color: #ffff66;
+  color: #333;
+  transform: scale(1.1);
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-200%);
+  cursor: pointer;
+}
+
+.password-container i.bi-eye-slash {
+  color: black;
+}
+
+.password-container i.bi-eye {
+  color: green;
+}
+.register-link p a {
+  text-decoration: rgb(223, 124, 11);
+  font-weight: 600;
+}
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+.box .btn {
+  width: 60%;
+  height: 45px;
+  background: rgb(185, 185, 185);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Check balance</title>
+    <link rel="stylesheet" href="check.css" />
+  </head>
+
+  <div class="home">
+    <button type="button" onclick="window.location.href='homepage.html'">
+      Home
+    </button>
+  </div>
+  <div class="signout">
+    <button
+      type="button"
+      onclick="alert('Sign-out from the account');window.location.href='index.html'"
+    >
+      Sign out
+    </button>
+  </div>
+  <body>
+    
+    <h1>Balance</h1>
+    <div class="info">
+    <p>
+      <div class="cn">
+      <b>Card number: ********9696</b><br />
+    </div>
+    <div class="follow">
+      <br />The balance of the following cardholder is:
+    </div>
+    </p>
+    <br />
+    <div class="amount">
+    <p><b>Available balance:</b> 50000.0</p>
+  </div>
+  </div>
+  <script>
+     function redirectToLoginPage() {
+        window.location.href = "index.html";
+        alert("You have been idle for too long. Please log in again.");
+      }
+
+      const inactivityTimeout = 120000;
+      let timeoutId;
+      function resetInactivityTimer() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(function () {
+          redirectToLoginPage();
+        }, inactivityTimeout);
+      }
+      function resetInactivityTimer() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(redirectToLoginPage, inactivityTimeout);
+      }
+    </script>
+  </body>
+</html>

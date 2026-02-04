@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mobile Recharge</title>
+    <link rel="stylesheet" href="mobile.css" />
+    <script src="mobilerecharge.js"></script>
+  </head>
+  <body>
+    <div>
+      <button
+        type="button"
+        onclick="window.location.href='billpayment.html';"
+        class="b"
+        id="left"
+      >
+        Back
+      </button>
+      <button
+        type="button"
+        class="b"
+        id="home"
+        onclick="window.location.href='homepage.html'"
+      >
+        Home
+      </button>
+    </div>
+    <div>
+      <h1>
+        Mobile Recharge
+      </h1>
+      <form id="f1">
+        <label for="num" class="no">Enter the Mobile Number:</label>
+        <input type="text" id="num" class="no" />
+        <p><br /></p>
+        <table style="width: 60%;">
+          <tr>
+            <th class="charge" style="width: 75%;">Recharge plan</th>
+            <th>Amount</th>
+          </tr>
+          <tr>
+            <td class="charge">
+              validity:28days<br />data:1GB/day<br />calls:unlimited
+            </td>
+            <td>
+              <input type="radio" id="299" name="amount" /><label for="299"
+                >Rs.299/-</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="charge">
+              validity:56days<br />data:1GB/day<br />calls:unlimited
+            </td>
+            <td>
+              <input type="radio" id="450" name="amount" /><label for="450"
+                >Rs.450/-</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="charge">
+              validity:30days<br />data:2.5GB/day<br />calls:unlimited
+            </td>
+            <td>
+              <input type="radio" id="499" name="amount" /><label for="499"
+                >Rs.499/-</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="charge">
+              validity:365days<br />data:2GB/day<br />calls:unlimited<br />free
+              hellotones
+            </td>
+            <td>
+              <input type="radio" id="2999" name="amount" /><label for="2999"
+                >Rs.2999/-
+              </label>
+            </td>
+          </tr>
+        </table>
+        <p><br /></p>
+        <button type="button" id="rec" onclick="validate()">
+          Recharge
+        </button>
+      </form>
+    </div>
+    <script>
+      const input = document.getElementById("num");
+      input.addEventListener("input", function () {
+        const inputValue = input.value;
+        if (inputValue.length === 10) {
+          input.style.backgroundColor = "lightgreen";
+        } else {
+          input.style.backgroundColor = "red";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE htmll>
+<html>
+  <head>
+    <title>successsfully completed</title>
+    <link rel="stylesheet" href="last.css" />
+    <script src="success.js"></script>
+  </head>
+  <body>
+    <div>
+      <button
+        type="button"
+        onclick="window.location.href='homepage.html'"
+        class="home"
+      >
+        home
+      </button>
+      <button
+        type="button"
+        onclick="alert('Sign out from the account');window.location.href='index.html'"
+        class="sign"
+      >
+        Sign Out
+      </button>
+    </div>
+    <h1 id="success">
+      Successfully Completed
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/020/905/821/original/tick-icon-accept-approve-sign-design-free-free-png.png"
+        height="50"
+      />
+    </h1>
+    <p>
+      The transaction is completed successfully
+    </p>
+    <p id="tid"></p>
+    <script>
+      var x = 0;
+      for (let i = 0; i < 12; i++) {
+        var y = Math.floor(Math.random() * 10);
+        x = x * 10 + y;
+      }
+      document.getElementById("tid").innerHTML = "Transaction ID: " + x;
+      const time = 20000;
+      let timeout;
+      function startTimer() {
+        timeout = setTimeout(redirect, time);
+      }
+      function resetTimer() {
+        clearTimeout(timeout);
+        startTimer();
+      }
+      function redirect() {
+        window.location.href = "index.html";
+        alert("You have been idle for too long. Please log in again.");
+      }
+      window.onload = startTimer;
+      window.addEventListener("mousemove", resetTimer);
+      window.addEventListener("keypress", resetTimer);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New user</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="newuser.css" />
+</head>
+<body>
+  <script> 
+  function redirectToLoginPage() {
+  window.location.href = "index.html";
+  alert("You have been idle for too long. Please log in again.");
+}
+
+const inactivityTimeout = 120000;
+let timeoutId;
+function resetInactivityTimer() {
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(function () {
+    redirectToLoginPage();
+  }, inactivityTimeout);
+}
+function resetInactivityTimer() {
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(redirectToLoginPage, inactivityTimeout);
+}
+document.addEventListener("mousemove", resetInactivityTimer);
+document.addEventListener("keydown", resetInactivityTimer);
+resetInactivityTimer();
+       function togglePasswordVisibility(icon) {
+        const passwordInput = document.getElementById("password");
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          icon.classList.remove("bi-eye-slash");
+          icon.classList.add("bi-eye");
+        } else {
+          passwordInput.type = "password";
+          icon.classList.remove("bi-eye");
+          icon.classList.add("bi-eye-slash");
+        }
+      }
+
+      function validatePassword() {
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    
+    // Regular expression to enforce password requirements
+    var passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (!passwordPattern.test(password)) {
+        alert("Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, one number, and one special character.");
+        return false;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+    }
+    
+    return true;
+  }
+  function validateMPIN() {
+    var mpin = document.getElementById("mpin").value;
+    var confirmMPIN = document.getElementById("confirmMPIN").value;
+    var mpinPattern = /^\d{4}$/;
+    if (!mpinPattern.test(mpin) || !mpinPattern.test(confirmMPIN)) {
+        alert("MPINs should contain exactly 4 digits.");
+        return false;
+    }
+  
+    if (mpin !== confirmMPIN) {
+        alert("MPINs do not match.");
+        return false;
+    }
+    return true;
+  }
+  function validateCardNumber() {
+    var cardNumber = document.getElementById("cardNumber").value;
+    var cardNumberPattern = /^\d{16}$/;
+    if (!cardNumberPattern.test(cardNumber)) {
+        alert("Card Number should contain exactly 16 digits.");
+        return false;
+    }
+  
+    return true;
+  }
+  
+  function validateCheckbox() {
+    var checkbox = document.getElementById("terms");
+  
+    if (!checkbox.checked) {
+        alert("Please accept the terms and conditions.");
+        return false;
+    }
+    return true;
+  }
+  
+  function checkEmptyFields() {
+    var name = document.getElementById("name").value;
+    var username = document.getElementById("Username").value;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    var cardNumber = document.getElementById("cardNumber").value;
+    var mpin = document.getElementById("mpin").value;
+    var confirmMPIN = document.getElementById("confirmMPIN").value;
+  
+    if (
+        name === "" ||
+        username === "" ||
+        password === "" ||
+        confirmPassword === "" ||
+        cardNumber === "" ||
+        mpin === "" ||
+        confirmMPIN === ""
+    ) {
+        alert("Please fill in all fields.");
+        return false;
+    }
+  
+    return true;
+  }
+  
+  function handleSubmit(event) {
+    if (!checkEmptyFields() || !validatePassword() || !validateMPIN() || !validateCardNumber() || !validateCheckbox()) {
+        alert("Please correct the errors before submitting.");
+        event.preventDefault();
+    }
+    if (checkEmptyFields() && validatePassword() && validateMPIN() && validateCardNumber() && validateCheckbox()) {
+    window.location.href="index.html";}
+  }
+  
+  </script>
+    <style>
+        body {
+            background-image: url('https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canvarainbow-gradient-pinkand-purple-virtual-background-_Tcjok-d9b4.jpg');
+        }
+    </style>
+
+    <div class="box">
+        <div class="user">
+            <h1 style="color: black;">New User</h1>
+        </div>
+        <br />
+        <div class="te1">
+            <p style="color: rgb(113, 18, 255); text-align: "center; font-size:"15px;">
+                <strong>Enter the below given details to Sign-in into the app and access our services. </strong>
+            </p>
+        </div>
+        <br />
+        <div class="image">
+            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/New_user_icon-01.svg/1200px-New_user_icon-01.svg.png'
+                alt="new user" width="80" height="80" />
+        </div>
+        <br />
+        <div class="text">
+            <form action="javascript:void(0);" id="myForm" onsubmit="handleSubmit(event)">
+                <label for="name"><b>Name:</b></label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="name" name="name" value="" /><br /><br />
+                <label for="Username"><b>Username:</b></label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="Username" name="Username" value="" /><br /><br />
+                <label for="password"><b>Password:</b></label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;
+                <input type="password" id="password" name="password" value="" />
+                <i class="bi bi-eye-slash" id="showPasswordButton" onclick="togglePasswordVisibility(this)" ></i>
+                <br /><br />
+                <label for="confirmPassword"><b>Confirm Password:</b></label>
+                &nbsp;
+                <input type="password" id="confirmPassword" name="confirmPassword" value="" /><br /><br />
+                <label for="cardNumber"><b>Card Number:</b></label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="cardNumber" name="cardNumber" value="" /><br /><br />
+                <label for="Password"><b>MPIN:</b></label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="password" id="mpin" name="mpin" value="" /><br /><br />
+                <label for="Password"><b>Confirm MPIN:</b></label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="password" id="confirmMPIN" name="confirmMPIN" value="" /><br /><br />
+        </div>
+        <div class="te2">
+            <input type="checkbox" id="terms" name="terms" value="" />
+            <label for="terms">
+                I have accepted the terms and conditions to access the service of the app.</label><br /><br /></div>
+        <input type="submit" value="Sign-in" class="signin" />
+        <img src='https://cdn-icons-png.flaticon.com/512/5509/5509636.png' alt="new user" align="center"
+            width="30" height="30" />
+        </br></br><br />
+        </form>
+    </div>
+</body>
+</html>

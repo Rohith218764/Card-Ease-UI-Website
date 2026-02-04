@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      home page
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .background {
+        background-image: url("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          
+      }
+      .content {
+  margin: 5em 0 auto;
+  width: 100%;
+}
+.main {
+  height: 40em;
+  border-bottom: 2px solid grey;
+}
+.box {
+  width: 375px;
+  height: 375px;
+  border: 15px solid black;
+  border-radius: 300px;
+  margin-left: 36.5%;
+}
+.text {
+  margin-top: 5em;
+  text-align: center;
+  font-size: medium;
+}
+.remain {
+  height: 45em;
+  padding: 10px;
+  width: 100%;
+}
+
+.bo {
+  height: 50%;
+  margin-left: 5%;
+  padding-top: 1em;
+  padding: 10px;
+  width: 87%;
+  border: 5px solid black;
+  background-color: rgb(102, 101, 101);
+  color: white;
+}
+
+.head {
+  text-align: center;
+  font-size: 150%;
+}
+.scroll
+{
+  text-size-adjust: 30px;
+}
+
+#about-button {
+  text-align: left;
+  padding: 20px;
+  background-color: aqua;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  float: right;
+  margin-left: 7.5%;
+}
+      #mySidenav a {
+        position: absolute;
+        left: -150px;
+        transition: 1s;
+        padding: 18px;
+        width: 500px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        border-radius: 5px 5px ;
+        margin: 30px;
+      }
+
+      #mySidenav a:hover {
+        left: 0;
+      }
+
+      #balance {
+        top: 150px;
+        background-color: #0cf33e;
+        margin: 30px;
+        
+        
+      }
+
+      #transaction {
+        top: 213px;
+        background-color: #eeff00;
+      }
+
+      #bill {
+        top: 276px;
+        background-color: #f44336;
+      }
+
+      #transfer {
+        top: 339px;
+        background-color: #555;
+      }
+      #signout {
+        top: 402px;
+        background-color: rgb(4, 255, 246);
+      }
+    </style>
+    
+  </head>
+  <body align="center" class="background">
+      
+      <div class="content">
+          <div class="main">
+    
+      <h1 align="center" style="color: black; font-size: 40px; text-decoration: underline;text-align: top;">HOME PAGE</h1>
+      <img src="https://cdni.iconscout.com/illustration/premium/thumb/man-withdraw-money-from-atm-machine-4909714-4089134.png">
+      
+      <div>
+        <a href="#about" id="about-button">About</a>
+        <marquee><h3> Customer Care : 1800-8811837378 . . . . . . . .            mail:- cardeaseindia@gmail.com</h3> </marquee>
+      </div>
+      <div class="content">
+          <div class="main">
+<div id="mySidenav" class="sidenav">
+  <a href="balance.html" id="balance">Balance</a>
+  <a href="history.html" id="transaction">Transaction History</a>
+  <a href="billpayment.html" id="bill">Bill payments</a>
+  <a href="transfer.html" id="transfer">Transfer</a>
+  <a href="index.html" onclick="alert('Do you want to sign-out')" id="signout">Sign out</a>
+</div>
+<div id="scroll" >
+
+</div>
+      </div>
+  <div class="remain">
+    <h1 id="about" style="text-decoration: underline; color: tomato;">
+      <big>Card Ease:</big> Empowering Digital Transactions and ATM Card
+      Management
+    </h1>
+  <div class="bo">
+    <h3 style="font-size: 125%;">About the Card Hodder</h3>
+    <p >
+      <h1> Cristiano Ronaldo</h1>
+    </p>
+    <p>
+      <h1> CR7</h1>
+    </p>
+    <p>
+      <h1>Card no: *******6969</h1>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+  </div>
+  </div>
+  </div>
+</div>
+</br></br>
+    </div>
+    <script>
+      function redirectToLoginPage() {
+  window.location.href = "index.html";
+  alert("You have been idle for too long. Please log in again.");
+}
+
+const inactivityTimeout = 20000;
+let timeoutId;
+function resetInactivityTimer() {
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(function () {
+    redirectToLoginPage();
+  }, inactivityTimeout);
+}
+function resetInactivityTimer() {
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(redirectToLoginPage, inactivityTimeout);
+}
+document.addEventListener("mousemove", resetInactivityTimer);
+document.addEventListener("keydown", resetInactivityTimer);
+resetInactivityTimer();
+</script>
+  </body>
+</html>

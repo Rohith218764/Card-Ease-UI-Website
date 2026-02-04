@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bill Payment</title>
+    <link rel="stylesheet" href="billpayment.css" />
+  </head>
+
+  <body align="center">
+    <script>
+      function redirectToLoginPage() {
+        window.location.href = "index.html";
+        alert("You have been idle for too long. Please log in again.");
+      }
+
+      const inactivityTimeout = 120000;
+      let timeoutId;
+      function resetInactivityTimer() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(function () {
+          redirectToLoginPage();
+        }, inactivityTimeout);
+      }
+      function resetInactivityTimer() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(redirectToLoginPage, inactivityTimeout);
+      }
+      document.addEventListener("mousemove", resetInactivityTimer);
+      document.addEventListener("keydown", resetInactivityTimer);
+      resetInactivityTimer();
+    </script>
+    <div class="heads">
+      <h1 align="center" style="color: Blue;">Bill Payment</h1>
+    </div>
+    <br />
+    <div class="h1">
+      <p style="color: red;">
+        Select any option and pay the bills online
+      </p>
+    </div>
+    <br />
+    <div class="dis">
+      <br /><br />
+      <label align="center" style="font-size: 20px; color: green;" for="Bills"
+        ><strong>Choose the option</strong></label
+      ><br /><br />
+      <div class="dik">
+        <img
+          align="center"
+          src="https://cdn-icons-png.flaticon.com/512/2814/2814630.png"
+          height="70"
+          width="70"
+        />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button
+          style="color: blue;"
+          type="button"
+          class="fast"
+          onclick="window.location.href='fastag.html'"
+        >
+          Fastag</button
+        ><br /><br /><br /><br />
+      </div>
+      <div class="dik">
+        <img
+          align="center"
+          src="https://cdn.iconscout.com/icon/free/png-256/free-electricity-bill-1817182-1538050.png"
+          alt="new user"
+          width="70"
+          height="70"
+        />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button
+          style="color: brown;"
+          type="button"
+          class="elec"
+          onclick="window.location.href='electric.html'"
+        >
+          Electric Bill</button
+        ><br /><br /><br /><br />
+      </div>
+      <div class="dik">
+        <img
+          align="center"
+          src="https://cdn.iconscout.com/icon/free/png-256/free-mobile-recharge-1817169-1538037.png?f=webp"
+          alt="new user"
+          width="70"
+          height="70"
+        />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button
+          style="color: black;"
+          type="button"
+          class="mob"
+          onclick="window.location.href='recharge.html'"
+        >
+          Mobile recharge</button
+        ><br /><br />
+      </div>
+    </div>
+    <button
+      style="color: red;"
+      type="button"
+      class="back"
+      onclick="window.location.href='homepage.html'"
+    >
+      Home
+    </button>
+  </body>
+</html>

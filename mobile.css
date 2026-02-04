@@ -1,0 +1,64 @@
+body {
+  background-image: url("https://img.freepik.com/free-vector/pastel-ombre-background-pink-purple_53876-120750.jpg?w=1480&t=st=1694015342~exp=1694015942~hmac=30938b139ffa1a1dbf88af1bf38b5fe0324f3060c6dbadb0469270c9beb8f725");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.b {
+  padding: 10px;
+  font-size: 15px;
+}
+h1:hover {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#left {
+  margin-left: 3%;
+  margin-top: 2%;
+}
+
+table,
+th,
+td {
+  border: 3px solid black;
+  padding: 10px;
+  border-collapse: collapse;
+  margin-left: 20%;
+}
+
+th {
+  font-size: 25px;
+}
+.charge {
+  width: 50%;
+  text-align: center;
+  transition: height 1s, font-size 0s;
+}
+.charge:hover {
+  height: 100px;
+  font-size: 180%;
+}
+h1 {
+  border: 3px solid rgb(254, 254, 254);
+  font-size: 60px;
+  text-align: center;
+  width: 10em;
+  margin-left: 30%;
+  background-color: rgb(148, 207, 255);
+  border-radius: 40px;
+}
+
+.no {
+  font-size: 30px;
+}
+
+#rec {
+  font-size: 125%;
+  padding: 20px;
+  margin-left: 46%;
+  margin-bottom: 5%;
+}
+
+#home {
+  margin-left: 85%;
+}

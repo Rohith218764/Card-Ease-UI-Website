@@ -1,0 +1,74 @@
+.box {
+  margin: 1em 13em auto;
+  width: 75%;
+  align-content: center center;
+  border: 10px solid black;
+  border-radius: 500px;
+}
+.text {
+  font-family: Arial, Helvetica, "sans-serif";
+  margin-left: 37%;
+  font-size: 120%;
+}
+
+.user {
+  width: 300px;
+  border: 5px solid black;
+  border-radius: 50px;
+  margin-left: 40%;
+  margin-top: 3%;
+  font-family: "Gill Sans Extrabold", sans-serif;
+  letter-spacing: 3px;
+  text-align: center;
+  inline-size: 20%;
+  block-size: 100px;
+  box-sizing: border-box;
+  border-inline: 1px solid black;
+  background-color: rgb(191, 207, 255);
+  animation: mymove 0.7s infinite;
+}
+@keyframes mymove {
+  100% {
+    border-inline: 7px solid rgb(158, 151, 151);
+  }
+}
+.image {
+  margin-left: 47%;
+  text-align: center;
+  border: 5px solid black;
+  border-radius: 80px;
+  width: 87px;
+}
+.te1 {
+  margin-left: 20%;
+  font-size: 120%;
+  font-family: Arial, Helvetica, "sans-serif";
+}
+.te2 {
+  margin-left: 27%;
+  font-size: 100%;
+}
+.signin {
+  align-content: "margin-left";
+  border: 5px solid black;
+  font-family: "Lucida Console", "Courier New", monospace;
+  border-radius: 20px;
+  margin-left: 43%;
+  padding: 10px;
+  width: 100px;
+  background-image: url("https://parspng.com/wp-content/uploads/2023/01/Gradientpng.parspng.com-7.png");
+  transition-property: "width";
+  transition-duration: 2s;
+}
+.signin:hover {
+  width: 150px;
+}
+i {
+  position: absolute;
+  transform: translateX(-125%) translateY(15%);
+  cursor: pointer;
+}
+input {
+  padding: 4px;
+  border-radius: 3px;
+}
